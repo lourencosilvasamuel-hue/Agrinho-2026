@@ -1,0 +1,239 @@
+/* ==========================================================================
+   PROJETO AGRINHO 2026 - ESTILO RETRÔ / VINTAGE ORGANIC
+   ========================================================================== */
+
+/* Importando fontes retrô diretamente do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lexend+Mega:wght@500;700&display=swap');
+
+/* Configuração de Cores e Padrões Retrô (Variáveis) */
+:root {
+    --bg-page: #f4f1ea;        /* Cor de fundo: Creme/Aveia nostálgico */
+    --text-color: #1a1a1a;     /* Texto quase preto para alto contraste */
+    --green-saf: #2e6f40;      /* Verde Floresta antigo */
+    --orange-saf: #d96b43;     /* Terracota/Laranja queimado anos 70 */
+    --yellow-saf: #f1b24a;     /* Amarelo mostarda vintage */
+    --card-bg: #ffffff;        /* Fundo dos blocos */
+    --border-retro: 3px solid #1a1a1a; /* Borda grossa marcante */
+    --shadow-retro: 5px 5px 0px #1a1a1a; /* Sombra sólida estilo Pop Art/Retrô */
+}
+
+/* Reset básico de margens */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo do Site */
+body {
+    background-color: var(--bg-page);
+    color: var(--text-color);
+    font-family: 'Courier Prime', monospace; /* Fonte estilo máquina de escrever */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Limitador de largura do conteúdo */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    background-color: var(--orange-saf);
+    border-bottom: var(--border-retro);
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Lexend Mega', sans-serif; /* Fonte de bloco pesada */
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: var(--bg-page);
+    /* Efeito retrô de contorno de texto */
+    -webkit-text-stroke: 1.5px var(--text-color);
+    text-shadow: 4px 4px 0px var(--text-color);
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+header h2 {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: normal;
+    background-color: var(--yellow-saf);
+    display: inline-block;
+    padding: 6px 16px;
+    border: var(--border-retro);
+    box-shadow: 3px 3px 0px var(--text-color);
+}
+
+/* Menu de Navegação */
+nav {
+    margin-top: 35px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 0.85rem;
+    background-color: var(--bg-page);
+    padding: 8px 16px;
+    border: var(--border-retro);
+    box-shadow: 3px 3px 0px var(--text-color);
+    transition: all 0.1s ease; /* Animação rápida estilo clique */
+}
+
+/* Efeito Hover nos Links (Quando passa o mouse) */
+nav ul li a:hover {
+    background-color: var(--yellow-saf);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--text-color);
+}
+
+/* ==========================================================================
+   SEÇÕES DE CONTEÚDO
+   ========================================================================== */
+section {
+    background-color: var(--card-bg);
+    border: var(--border-retro);
+    box-shadow: var(--shadow-retro);
+    padding: 35px;
+    margin: 40px 0;
+}
+
+/* Títulos das Seções */
+section h3 {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 1.4rem;
+    color: var(--green-saf);
+    margin-bottom: 20px;
+    background-color: var(--bg-page);
+    display: inline-block;
+    padding: 5px 10px;
+    border: var(--border-retro);
+    box-shadow: 3px 3px 0px var(--text-color);
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+strong {
+    background-color: #ffe699; /* Destaque amarelo clássico em textos importantes */
+    padding: 2px 4px;
+}
+
+/* Listas Marcadas (Benefícios e Estratos) */
+section ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+/* Grid de Cards (Seção Como Funciona) */
+.principios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: var(--bg-page);
+    border: var(--border-retro);
+    padding: 20px;
+    box-shadow: 4px 4px 0px var(--text-color);
+}
+
+.card h4 {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 1.1rem;
+    color: var(--orange-saf);
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   INTERAÇÃO E BOTÕES (ÁREA DO QUIZ)
+   ========================================================================== */
+.interacao {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: var(--yellow-saf);
+    border: var(--border-retro);
+    box-shadow: 4px 4px 0px var(--text-color);
+    text-align: center;
+}
+
+.interacao p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Botão Retrô que afunda ao ser clicado */
+button {
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 1rem;
+    background-color: var(--green-saf);
+    color: white;
+    border: var(--border-retro);
+    padding: 12px 28px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px var(--text-color);
+    transition: all 0.1s ease;
+}
+
+button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--text-color);
+}
+
+button:active {
+    transform: translate(5px, 5px); /* Dá o efeito físico de botão pressionado */
+    box-shadow: 0px 0px 0px var(--text-color);
+}
+
+/* Caixa de Resultado do Quiz */
+#resultado-quiz {
+    border: var(--border-retro) !important;
+    box-shadow: 3px 3px 0px var(--text-color);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: var(--green-saf);
+    color: var(--bg-page);
+    border-top: var(--border-retro);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+}
